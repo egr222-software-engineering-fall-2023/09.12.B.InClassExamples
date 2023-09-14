@@ -1,5 +1,5 @@
 public class Mirror {
-    public static final int SIZE = 4;
+    public static final int SIZE = 3;
 
     public static void main(String[] args) {
         border();
@@ -13,10 +13,38 @@ public class Mirror {
     }
 
     public static void topHalf() {
-        System.out.println("topHalf");
+        for (int line = 1; line <= SIZE; line++) {
+            System.out.print("|");
+            for (int i =1; i<= -2*line+2*SIZE; i++) {
+                System.out.print(" ");
+            }
+            System.out.print("<>");
+            for (int i= 1; i <= 4*line-4; i++) {
+                System.out.print(".");
+            }
+            System.out.print("<>");
+            for (int i =1; i<= -2*line+2*SIZE; i++) {
+                System.out.print(" ");
+            }
+            System.out.println("|");
+        }
     }
 
     public static void bottomHalf() {
-        System.out.println("bottomHalf");
+        for (int line = SIZE; line >= 1; line--) {
+            System.out.print("|");
+            for (int i =1; i<= -2*line+2*SIZE; i++) {
+                System.out.print(" ");
+            }
+            System.out.print("<>");
+            for (int i= 1; i <= 4*line-4; i++) {
+                System.out.print(".");
+            }
+            System.out.print("<>");
+            for (int i =1; i<= -2*line+2*SIZE; i++) {
+                System.out.print(" ");
+            }
+            System.out.println("|");
+        }
     }
 }
